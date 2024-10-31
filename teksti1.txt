@@ -1,3 +1,0 @@
-Tähän tuli nyt ensimmäinen muutos.
-
-Toinen muutos ennen git add -p
