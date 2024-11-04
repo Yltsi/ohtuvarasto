@@ -65,7 +65,7 @@ class TestVarasto(unittest.TestCase):
     def test_ota_neg(test):
         varasto = Varasto(tilavuus=100, alku_saldo=20)
         varasto.ota_varastosta(-10)
-        assert varasto.saldo==0
+        assert varasto.saldo==20
 
     def test_varasto_str():
         varasto = Varasto(tilavuus=100, alku_saldo=20)
