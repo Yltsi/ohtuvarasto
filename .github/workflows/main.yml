@@ -22,10 +22,12 @@ jobs:
         run: pip install pylint
       - name: Install dependencies
         run: poetry install
+      - name: Run Pylint
+        run: poetry run pylint src/
 
       - name: Run tests
         run: poetry run coverage run --branch -m pytest
-        run: pylint src
+
 
       - name: Coverage report
         run: poetry run coverage xml
