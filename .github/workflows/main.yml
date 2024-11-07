@@ -18,10 +18,14 @@ jobs:
           python-version: '3.10'
       - name: Install Poetry
         run: pip install poetry
+      - name: Install Pylint
+        run: pip install pylint
       - name: Install dependencies
         run: poetry install
+
       - name: Run tests
         run: poetry run coverage run --branch -m pytest
+        run: pylint src
 
       - name: Coverage report
         run: poetry run coverage xml
